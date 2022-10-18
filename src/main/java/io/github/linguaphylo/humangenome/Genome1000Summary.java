@@ -19,17 +19,21 @@ public class Genome1000Summary {
             "/WorkSpace/HumanGenome/";
     final static String DATA_DIR = System.getProperty("user.home") +
             "/WorkSpace/HumanGenome/data";
+    // replace $CHR$
     final static String FILE_STEM = "ALL.chr$CHR$.shapeit2_integrated_snvindels_v2a_27022019.GRCh38.phased.vcf.gz";
 
     static int[][] counts; // columns A C G T N -?
-    final static int N_COL = 6;
-    static String[] names;
+    final static int SELECTED = 1;
+    static String[] colNames;
 
     public Genome1000Summary() {
         final int N = 25;
         counts = new int[N][N_COL];
         names = new String[N];
     }
+
+    public
+
 
     private static void countNucleotideFrequency(int[] freqs, String line) {
         assert freqs.length == N_COL;
